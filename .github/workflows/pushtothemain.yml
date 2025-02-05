@@ -3,7 +3,7 @@ name: Merge changes to main
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   action-pull-request:
