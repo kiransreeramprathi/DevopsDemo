@@ -1,0 +1,250 @@
+body {
+		font-family: Arial, sans-serif;
+		background-image: url('https://www.sayrechamber.com/wp-content/uploads/2019/07/personal-finance.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		color: #333;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		user-select: none;
+	}
+
+	header {
+		background-color: red; /* Red background color */
+        color: #ffcc00; /* Yellow font color */
+        padding: 20px;
+        text-align: center;
+        position: sticky;
+        top: 0; /* Stick the header to the top */
+        z-index: 100; /* Ensure the header is above other content */
+        opacity: 0; /* Initially set opacity to 0 */
+        animation: fadeIn 2s ease-in-out forwards; /* Fade-in animation for the header */
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 100;
+		}
+	}
+
+	header h1 {
+		color: #ffcc00;
+		opacity: 100; /* Initially set opacity to 0 */
+		animation: zoomIn 2s ease-in-out forwards; /* Zoom-in animation for the header text */
+	}
+
+	@keyframes zoomIn {
+		from {
+			transform: scale(0);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+
+	/* Text panning animation */
+	.header-text-animation {
+		display: inline-block;
+		transform-origin: right;
+		transform: translateX(100%);
+		opacity: 0; /* Initially set opacity to 0 */
+		animation: panIn 2s ease-in-out forwards; /* Text panning animation */
+	}
+
+	@keyframes panIn {
+		from {
+			transform: translateX(100%);
+			opacity: 0;
+		}
+		to {
+			transform: translateX(0);
+			opacity: 100;
+		}
+	}
+
+	.logo {
+		position: absolute;
+		top: 5px;
+		left: 10px;
+		max-height: 90px;
+		opacity: 100; /* Initially set opacity to 0 */
+		animation: zoomIn 3s ease-in-out forwards; /* Zoom-in animation for the logo */
+		box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Add shadow behind the logo */
+		margin: 0 auto;
+		display: inline-block;
+	}
+
+	@keyframes zoomIn {
+		from {
+			transform: scale(0);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+
+	.card-container {
+		max-width: 100%;
+  		display: flex;
+  		flex-direction: row; /* Change to row to make cards appear horizontally */
+  		overflow-x: auto;
+	}
+
+	.card {
+		background-color: rgba(255, 255, 255, 0.7);
+		padding: 20px;
+		margin: 10px;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		min-width: 300px;
+		max-width: 400px;
+		text-align: center;
+	}
+
+	.card h2 {
+		color: #333; /* Dark text color for section headings */
+	}
+
+	/* Typing animation */
+	.typing-text {
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+		animation: typing 5s steps(40, end), blink-caret 0.2s step-end infinite;
+	}
+
+	@keyframes typing {
+		from {
+			width: 0;
+		}
+		to {
+			width: 100%;
+		}
+	}
+
+	@keyframes blink-caret {
+		from, to {
+			border-color: transparent;
+		}
+		50% {
+			border-color: black;
+		}
+	}
+
+	.footer {
+		background-color: #333;
+		color: #fff;
+		text-align: center;
+		padding: 10px 0;
+		margin-top: auto; /* Push the footer to the bottom */
+	}
+
+	.map-container {
+		width: 100%;
+		height: 400px;
+		margin-top: 200px;
+		margin-bottom: 80px;
+	}
+
+	/* Tabs styles */
+	.tabs {
+		display: flex;
+        justify-content: flex-start; /* Align tabs to the left */
+            margin-top: 0px;
+            background-color: yellow;
+	}
+
+	.tab-button {
+		background-color: Yellow;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 200px;
+            cursor: pointer;
+            margin: 0 10px;
+	}
+
+	.tab-button:hover {
+		background-color: red;
+	}
+
+	.tab-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 0px;
+		background-color: rgba(255, 255, 204, 0.7);
+		text-align : left;
+	}
+
+	.tab-panel {
+		display: none;
+		text-align: center;
+		max-width: 600px;
+		font-size: 15;
+	}
+	.selected {
+            background-color: #ff9900;
+            color: #fff;
+        }
+	.tab-button.selected {
+        background-color: #ff9900;
+        color: #fff;
+    }
+	.anniversary {
+		position: absolute;
+		top: 5px;
+		right: 20px;
+		max-height: 90px;
+		opacity: 100; /* Initially set opacity to 0 */
+		animation: zoomIn 3s ease-in-out forwards; /* Zoom-in animation for the logo */
+		box-shadow: 0px 0px 15px rgba(0, 0, 126, 0.5); /* Add shadow behind the logo */
+	}
+	.container {
+  height: 100px;
+  max-width: 100%;
+  display: flex;
+}
+
+.cards {
+  height: 280px;
+  width: 600px;
+  background-color: rgba(255, 255, 153,2);
+  border-radius: 10px;
+  box-shadow: -1rem 0 1rem #000;
+  transition: 0.4s ease-out;
+  transform: translateX(0);
+  text-align : Center;
+}
+
+.cards:not(:first-child) {
+  margin-left: -50px;
+}
+
+.cards:hover {
+  transform: translateX(-80px);
+  transition: 0.4s ease-out;
+}
+
+.cards:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.titles {
+  color: Red;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  text-align : Center;
+  background-color: rgba(255, 255, 204, 0.7);
+}
